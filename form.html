@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>corona testing form</title>
+    <link rel="stylesheet" href="./stylesheets/form.css">
+</head>
+<body>
+    <div id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="../timeline.html">Timeline</a></li>
+                <li><a href="./form.html">Corona Testing</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="regform">
+        <h1>Information Form</h1>
+    </div>
+    <div class="main">
+        <form id="testform">
+            <div id="name">
+                <h2 class="name">Name</h2>
+                <input type="text" id="firstname" required name="first_name">
+                <label   id="firstlabel" >First Name</label>
+                <input type="text" id="lastname" required name="last_name">
+                <label id="lastlabel">Last Name</label>
+            
+            </div>
+            <h2 class="name">Profession</h2>
+            <input type="text" class="profession" name="profession" placeholder="student/doctor/teacher/other">
+            
+            <h2 class="name">Email</h2>
+            <input type="text" id="email" required name="email">
+
+            <h2 class="name">date of birth</h2>
+            <input type="date" id="dateofbirth" required name="dateofbirth">
+
+            <h2 class="name">Mobile Number</h2>
+            <input type="text" id="mobile" required name="mobile" pattern="[001][0-9]{9}">
+
+            <h2 class="name">State</h2>
+            <select name="state" id="state">
+                <option disabled="disabled" selected="selected" required>choose</option>
+                <option>Texas</option>
+                <option>Oklahoma</option>
+                <option>New Mexico</option>
+                <option>other</option>
+            </select>
+
+            <h2 class="travel">Have you travelled to a covid affected country within the last 1 month</h2>
+            <div id="travel">
+                <input type="radio" name="option" value="yes"> yes
+                <input type="radio" name="option" checked="checked" value="no"> no
+            </div>
+            <h2 id="symptomps"> do you have any of the following symptons</h2>
+            <div class="arrange">
+                <input type="checkbox" name="symptomps" value="fever" id="cb1">
+                <label for="cb1">fever</label><br>
+                <input type="checkbox" name="symptomps" value="dry cough" id="cb2">
+                <label for="cb2">dry cough</label><br>
+                <input type="checkbox" name="symptomps" value="cold" id="cb3">
+                <label for="cb3">cold</label><br>
+                <input type="checkbox" name="symptomps" value="breathing issues" id="cb4">
+                <label for="cb4">breathing issues</label><br>
+                <input type="checkbox" name="symptomps" value="chestpain" id="cb5">
+                <label for="cb5">chestpain</label><br>
+            </div>
+            <input type="submit" id="submit">
+            <h2 id="centers">testing centers around you <span id = "result"></span> </h2>
+        </form>
+    
+    </div>
+</body>
+</html>
